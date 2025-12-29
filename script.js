@@ -1,7 +1,9 @@
 
-function calculate() {
-   window.location.href = "loopbegin.html";
-}
+window.onload = function() {
+    document.getElementById("calculateBtn").onclick = function() {
+        window.location.href = "loopbegin.html";
+    };
+};
 
 function NaarScreen2() {
    window.location.href = "screen2.html";
