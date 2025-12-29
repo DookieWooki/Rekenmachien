@@ -2,63 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gefeliciteerd!</title>
-  <style>
-    body {
-      text-align: center;
-      margin-top: 50px;
-      font-family: Arial, sans-serif;
-    }
-    #celebrationContent {
-      display: none; /* hidden until button click */
-    }
-    img {
-      margin-top: 20px;
-      max-width: 80%;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
   <h1>🎉 Gefeliciteerd! 🎉</h1>
-  <button id="startBtn">Yay knop!</button>
+  <button id="startBtn" onclick="startCelebration()">Yay!</button>
 
   <div id="celebrationContent">
-    <img src="cat.gif" alt="Silly Cat Dance" width="600" height="400">
+    <img src="cat.gif" alt="Silly Cat Dance">
     <audio id="music1" loop>
       <source src="yay.mp3" type="audio/mpeg">
     </audio>
-        <audio id="music2" loop>
+    <audio id="music2" loop>
       <source src="manke.mp3" type="audio/mpeg">
     </audio>
   </div>
 
-  <script>
-    document.getElementById("startBtn").onclick = function() {
-      // Show GIF and audio
-      const content = document.getElementById("celebrationContent");
-      content.style.display = "block";
-
-      // Play music
-      const audio1 = document.getElementById("music1");
-      audio1.volume = 0.5;
-      audio1.play();
-           const audio2 = document.getElementById("music2");
-           
-      audio2.play();
-
-      // Start looping confetti
-      setInterval(() => {
-        confetti({
-          particleCount: 200,
-          spread: 70,
-          origin: { y: 0.8 }
-        });
-      }, 2000);
-
-      // Hide the start button
-      this.style.display = "none";
-    };
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

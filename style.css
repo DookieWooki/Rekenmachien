@@ -1,18 +1,50 @@
+/* General page style */
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  margin-top: 50px;
+  margin: 0;
+  padding: 20px;
 }
 
-input[type="number"] {
-  width: 300px;
-  height: 30px;
+/* Headings */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Inputs and select */
+input[type="number"], select {
+  width: 80%;
+  max-width: 300px;
+  height: 40px;
   padding: 5px;
   font-size: 18px;
-  margin: 5px;
+  margin: 10px 0;
 }
-select, button {
-  font-size: 16px;
-  margin: 10px;
-  padding: 5px;
+
+/* Buttons */
+button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+/* GIF responsiveness */
+img {
+  max-width: 90%;
+  height: auto;
+  margin-top: 20px;
+}
+
+/* Container for celebration content */
+#celebrationContent {
+  display: none;
+}
+
+/* Make calculator inputs stack nicely on small screens */
+@media (max-width: 500px) {
+  input[type="number"], select {
+    width: 100%;
+  }
 }
