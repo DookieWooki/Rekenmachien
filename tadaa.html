@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gefeliciteerd!</title>
+  <style>
+    body {
+      text-align: center;
+      margin-top: 50px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <h1>🎉 Gefeliciteerd! 🎉</h1>
+  <script>
+    window.addEventListener('load', function (){
+  confetti({
+    particleCount:200,
+    spread: 70,
+    origin: {y:0.6}
+  });
+});
+</script>
+
+  <img src="cat.gif" alt="Silly Cat Dance" width="400">
+
+</body>
+</html>
